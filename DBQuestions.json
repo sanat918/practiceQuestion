@@ -211,3 +211,20 @@ db.challenges.aggregate([{$group:{_id:"$address.state",noOfUser:{$sum:1}}},{$sor
 
 // challenge17 Find the user(s) with the highest number of friends.
 db.challenges.aggregate([{$project:{_id:"$name",noOfFriends:{$size:"$friends"}}},{$sort:{noOfFriends:-1}}])
+
+
+//Aggreate list
+
+// aggregate01: Count the number of people in each country.
+db.people.aggregate([{$group:{_id:"$address.country",noOfPeople:{$sum:1}}},{$sort:{noOfPeople:1}}])
+
+//aggregate02: What is the most popular address and how many people live there?
+db.people.aggregate([{$group:{_id:{country:"$address.country",city:"$address.city",postalCode:"$address.postalcode",street:"$address.street"},noOfPeople:{$sum:1}}},{$sort:{noOfPeople:1}}])
+
+// aggregate03: How many people in each country have ever paid at a restaurant?
+db.people.aggregate([{$match:{"payments.name":{$in:["restaurant"]}}},{$group:{_id:{country:"$address.country"},numberOfPeople:{$sum:1}}}])
+
+// aggregate04: Find 3 people with the most total account balance. If a person has the same total asset balance, compare using "firstName" and "lastName" fields
+db.people.aggregate([{$group:{_id:{fName:"$firstName",lName:"$lastName"},balance:{$sum:"$wealth.bankAccounts.balance"}}},{$sort:{balance:-1}},{$project:{fName:1,lName:1,balance:1}}])
+
+//aggregate05: Count the number of restaurant payments, the total amount spent, and the average amount per payment by country.
