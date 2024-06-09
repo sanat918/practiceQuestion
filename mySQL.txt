@@ -1,4 +1,5 @@
-
+Source w3school
+-----------------------------
 Note:--SQL keywords are NOT case sensitive. where Mongodb is case sensivtive.
        Table name is sensitive.
 
@@ -108,6 +109,58 @@ select * from product where price between 10 and 20 and CategoryID not in (1,2,3
 //selects all products with a ProductName between "Carnarvon Tigers" and "Mozzarella di Giovanni":
 select * from Products where ProductName between "Carnarvon Tigers" and "Mozzarella di Giovanni";
 
+// selects all products with a ProductName not between "Carnarvon Tigers" and "Mozzarella di Giovanni":
+select * from Products where ProductName not between "Carnarvon Tigers" and "Mozzarella di Giovanni";
+
+//creates two aliases, one for the CustomerID column and one for the CustomerName column:
+select CustomerID as id, CustomerName as name from customer;
+
+//creates an alias named "Address" that combine four columns (Address, PostalCode, City and Country):
+select CONCAT_WS(Address, PostalCode, City and Country) as "Adress" from customer;
+
+//selects all the orders from the customer with CustomerID=4 (Around the Horn). We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively
+select o.orderid,c.CustomerName from Customers as c, Orders as o where c.CustomerID=4 and o.CustomerID=4;
+
+
+Supported Types of Joins in MySQL
+------------------------------------------
+INNER JOIN: Returns records that have matching values in both tables
+LEFT JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT JOIN: Returns all records from the right table, and the matched records from the left table
+CROSS JOIN: Returns all records from both tables
+
+
+// select all the values fro order and customer value have same CustomerID
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+//statement will select all customers, and any orders they might have:
+select c.CustomerName,o.orderid from order as o left JOIN customer as c on o.CustomerID=c.CustomerID; 
+
+//statement will return all employees, and any orders they might have placed
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName FROM Orders RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID ORDER BY Orders.OrderID;
+
+
+//selects all customers, and all orders
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers CROSS JOIN Orders;
+
+Self Join
+---------------
+A self join is a regular join, but the table is joined with itself.
+
+UNION Operator
+-------------------------
+The UNION operator is used to combine the result-set of two or more SELECT statements.
+Every SELECT statement within UNION must have the same number of columns
+The columns must also have similar data types
+The columns in every SELECT statement must also be in the same order
+
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+GroupBy,Having,Exists,Any,All,
 
 
 
