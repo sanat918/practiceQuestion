@@ -1,5 +1,7 @@
 
 Note:--SQL keywords are NOT case sensitive. where Mongodb is case sensivtive.
+       Table name is sensitive.
+
 
 Semicolon after SQL Statements?
 ---------------------------------------------
@@ -34,6 +36,90 @@ SELECT DISTINCT Country FROM Customers;
 
 //count distinct country names from table
 SELECT COUNT(DISTINCT Country) FROM Customers;
+
+//select all customer who live in maxicp
+SELECT * FROM Customers WHERE Country = 'Mexico';
+
+
+//selects all fields from "Customers" where country is "Germany" AND city is "Berlin"
+SELECT * FROM Customers where country="Germany" and city="Berlin";
+
+
+//count all fields from "Customers" where country is "Germany" AND city is "Berlin"
+SELECT count(*) FROM Customers where country="Germany" and city="Berlin";
+
+
+//selects all fields from "Customers" where country is "Germany" AND city must be "Berlin" OR "Stuttgart"
+SELECT * FROM Customers WHERE Country = 'Germany' AND (City = 'Berlin' OR City = 'Stuttgart');
+
+//selects all customers from the "Customers" table, sorted by the "Country" column decending order
+SELECT * FROM Customers ORDER BY Country desc;
+
+// sort the record by country, customer name
+SELECT * FROM Customers ORDER BY Country, CustomerName;
+
+//selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column
+SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
+
+//Lists all customers with a NULL value in the "Address" field:
+SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NULL;
+
+//updates the first customer (CustomerID = 1) with a new contact person and a new city.
+update Customers set city="Hello" , cperson="sanat" where CustomerID=1;
+
+
+//deletes the customer "Alfreds Futterkiste" from the "Customers" table:
+delete from customers where CustomerName="Alfreds Futterkiste"
+
+// delete table customer
+delete from customer
+
+// show first three records from customer table
+select * from customer limit 3;
+
+
+//return only 3 records, start on record 4 (OFFSET 3)
+select * from customer limit 3 offset 3;
+
+//finds the price of the cheapest product: MIn,MAX,AVG,SUm
+select MIN(price) as minPrice from products;
+
+Like Operator
+----------------
+LIKE Operator	Description
+WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
+WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
+WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+
+//selects all customers that are located in "Germany", "France" or "UK":
+select * from customer where country in ('GErmany','France','UK')
+
+
+// selects all products with a price between 10 and 20 (same for not between)
+select * from customer where price between 10 and 20;
+
+//selects all products with a price between 10 and 20. In addition; do not show products with a CategoryID of 1,2, or 3
+select * from product where price between 10 and 20 and CategoryID not in (1,2,3)
+
+//selects all products with a ProductName between "Carnarvon Tigers" and "Mozzarella di Giovanni":
+select * from Products where ProductName between "Carnarvon Tigers" and "Mozzarella di Giovanni";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
