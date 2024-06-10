@@ -160,7 +160,55 @@ SELECT City FROM Suppliers
 ORDER BY City;
 
 
+1. Understanding Stored Procedures:
+------------------------------------------
+What is a Stored Procedure? - A stored procedure is a set of SQL statements that can be stored in the MySQL database server. It's like a function in programming languages.
+Advantages of Stored Procedures: They enhance performance, improve security, and promote code reusability.
+
+2. Syntax:
+------------------------------
+DELIMITER //
+
+CREATE PROCEDURE simple_proc()
+BEGIN
+    SELECT * FROM customers;
+END //
+
+DELIMITER ;
+
+CALL procedure_name();
+
+
+Adding Parameters:
+---------------------------------
+DELIMITER //
+
+CREATE PROCEDURE get_customer_by_id(IN customer_id INT)
+BEGIN
+    SELECT * FROM customers WHERE id = customer_id;
+END //
+
+DELIMITER ;
+
+
+
+Dropping a Stored Procedure:
+----------------------------------
+DROP PROCEDURE IF EXISTS procedure_name;
+
+
+Link--https://github.com/ValentineFernandes/MySQL-Assignment
+-------------------------
+
+
+
+
+
+
+
+
 GroupBy,Having,Exists,Any,All,
+
 
 
 
