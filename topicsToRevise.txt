@@ -6,3 +6,11 @@ useMemo
 useCallback
 redux
 fetch
+Sharding
+error bounderies
+generator functions
+
+
+
+
+
