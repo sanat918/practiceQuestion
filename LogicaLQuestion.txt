@@ -673,6 +673,90 @@ let arr=[1,2,3,1,2,1,2,1,4]
 output={ '1': 4, '2': 3, '3': 1, '4': 1 }
 
 ----------------------------------------------------------------------------------------------------------------------------
+Create a select drop-down where name will be displayed and based on name selection show the details
+===================================================================================================
+ let arr = [
+    { name: "George", age: 32, retiredate: "March 12, 2014" },
+    { name: "Edward", age: 17, retiredate: "June 2, 2023" },
+    { name: "Christine", age: 58, retiredate: "December 20, 2036" },
+    { name: "Sarah", age: 62, retiredate: "April 30, 2020" },
+  ];
+-----------------------------------------------------------------------------------------------------
+
+Write a function that would do this -
+var addSix = createBase(6);
+addSix(10); // returns 16
+addSix(21); // returns 27
+
+-----------------------------------------------------------------------------------------------------
+
+var trees = ["xyz", "xxxx", "test", "ryan", "apple"];delete trees[3];console.log(trees.length);
+ 
+-----------------------------------------------------------------------------------------------------
+
+(function() {
+
+	console.log(typeof displayFunc);
+
+	var displayFunc = function(){
+
+		console.log("Hi I am inside displayFunc");
+
+	}
+
+}());
+ 
+-----------------------------------------------------------------------------------------------------
+
+What will the following code output?
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { alert(i); }, 1000 + i);
+}
+-----------------------------------------------------------------------------------------------------
+
+Write an Express middleware function that logs the details of every request (method, URL, and timestamp) and manages errors.
+ 
+[12:27] Sanat Jain
+export.logs=((req,res,next)=>{
+    let time=new Date().getTIme()
+     console.log(req.url," ",req.method," ",time)
+       next()
+})
+
+-----------------------------------------------------------------------------------------------------
+ 
+Let's consider a blogging platform scenario where we have two collections: posts and comments. We want to calculate the average number of comments per post. Here's how the documents in these collections might look
+
+Posts - {
+  "_id": ObjectId("..."),
+  "title": "First Post",
+  "author": "Jane Doe",
+  "content": "This is the first post.",
+  "publishDate": ISODate("2023-01-01")
+}
+Comments - {
+  "_id": ObjectId("..."),
+  "postId": ObjectId("..."), // Reference to Posts._id
+  "commentText": "Great post!",
+  "author": "John Smith",
+  "commentDate": ISODate("2023-01-02")
+}
+The task is to calculate the average number of comments per post.
+ 
+-----------------------------------------------------------------------------------------------------
+ 
+[12:37] Ritesh Singh
+let's consider a scenario where we need to fetch data from three different API endpoints.run these calls in parallel and ensure that we handle both successful responses and errors appropriately.
+// URLs of the APIs to fetch data from
+  const apiUrls = [
+    'https://api.example.com/data1',
+    'https://api.example.com/data2',
+    'https://api.example.com/data3'
+  ];
+
+-----------------------------------------------------------------------------------------------------
+ 
+
 
 JWT can we used it only at login time
 what algo we generally use at JWT default one 
