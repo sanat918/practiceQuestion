@@ -744,18 +744,39 @@ Comments - {
 The task is to calculate the average number of comments per post.
  
 -----------------------------------------------------------------------------------------------------
- 
-[12:37] Ritesh Singh
-let's consider a scenario where we need to fetch data from three different API endpoints.run these calls in parallel and ensure that we handle both successful responses and errors appropriately.
-// URLs of the APIs to fetch data from
-  const apiUrls = [
-    'https://api.example.com/data1',
-    'https://api.example.com/data2',
-    'https://api.example.com/data3'
-  ];
+Anargram
+--------
 
------------------------------------------------------------------------------------------------------
+let str1 = "gram"  
+let str2 = "silent"
+
+function Ana(s1,s2){
+     
+      if(s1.length!=s2.length)
+      {
+          return -1;
+      }
  
+   s1=[...s1].sort()      
+     s2=[...s2].sort() 
+    
+    let result=1
+    
+    for(let i=0;i<s1.length;i++)
+    {
+        if(s1[i]!=s2[i]){
+            result =-1
+            break;
+        }
+    }
+    
+    return result
+}
+
+
+console.log( Ana(str1,str2) )
+-----------------------------------------------------------------------------------------------------
+
 
 
 JWT can we used it only at login time
