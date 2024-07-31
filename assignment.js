@@ -74,3 +74,20 @@ Additional Information
 
 Good luck!
 
+
+Last day in Jorie Family
+Hi All,
+
+THis is to inform you that 1st of August is my last working day at Jorie. Ever since i joined jorie, It's 
+been a great jorney I appreciate having the opportunity to work with you all. The journey so far has been rewarding in terms of my personal and professional growth.
+
+I would like to take this opportunity to express my gratitude for giving me all guidance,collaboration, wholesome support throughout my tenure in Jorie.
+
+My sincere thanks to Khwaja,CR... I am grateful that i had the opportunity to work with each of you.  You all have given me tons of memories to relive.
+
+Lastly, I am grateful to all my Jorie family members who supported me in any regard. My heartfelt apologies. If at 
+any moment I had hurt anyone(Michchami Dukkadam), through it was purely unintentional. 
+
+My very best wishes for your future ventures to each one of you. 
+
+I hope to have the pleasure to be in touch with you in coming days. I am always available. Contact me amytime via sanat918@gmail.com. You can also connect with me via 9575409953.
