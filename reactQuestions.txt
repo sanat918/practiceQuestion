@@ -734,5 +734,103 @@ You
 https://onecompiler.com/javascript/42musamuv
 Software Development Engineer - II (Fullstack): Sanat Jain | Capillary Technologies
 
+=========================
+
+
+// let a=10
+// let b=11
+
+// function Sum(a,b){
+//   return a+b
+// }
+
+// let data=await fetch('url')
+// let result=await data.json();
+
+// console.log(result)
+
+// Sum(a,b)
+// let num = 10;
+// async function add() {
+//     num = num + await 2;
+//     console.log(num);  // 10 promise resolved
+// } 
+// add();
+// num = num +1;
+// console.log(num); // 13
+// setTimeout(function() {console.log(1)}, 2000);
+// setTimeout(function(){console.log(2);},1700)
+// setTimeout(function(){console.log(3)},1500)
+// setTimeout(function(){console.log(4)},1300)
+// setTimeout(function(){console.log(5)},1100)
+// setTimeout(function(){console.log(6)},1000)
+
+// const promise = fetch("book.json");
+
+// promise.then(data => {
+//     console.log(data);
+// });
+
+// promise.then(null, data => {
+//     console.log(data);
+// });
+
+let memberName = [ // 500
+    {
+        id:123,
+        name:"Himanshu"
+    },
+    {
+      id:11,
+      name:"hema"
+    }
+];
+
+let logAction = [ // 300
+    {
+        id:12,
+        memberId: 11,
+        name:"Update Customer Details"
+    },
+];
+
+
+// 12, "Update Customer Details", "Himanshu"
+
+
+
+
+// let result=[]
+// logAction.map((ele1)=>{
+   
+//     let status=false
+  
+//     let obj={
+//       name:ele1.id,
+//       id:ele1.name,
+//       fName:memberName.map((ele)=>{
+//         if(ele.id==ele1.id)  {status=true return ele.name} 
+//         return null
+//       })
+      
+//     }
+    
+//   if(status){
+//       result.push(obj)
+//   }
+    
+  
+    
+    
+    
+})
+
+
+
+
+console.log(result)
+
+
+
 
 
