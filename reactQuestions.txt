@@ -677,7 +677,62 @@ output
 undefined
 ------------------------------------------------------------------------------------------------------------------------------
 
+Manjunath Muniraju
+12:07 PM
+can you hear me ?
+Manjunath Muniraju
+12:33 PM
+let num = 10;
+async function add() {
+    num = num + await 2;
+    console.log(num);
+}
+add();
+num = num +1;
+console.log(num);
+Manjunath Muniraju
+12:41 PM
+console.log(1)
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+console.log(6);
+Manjunath Muniraju
+12:44 PM
+const promise = fetch("book.json");
 
+promise.then(data => {
+    console.log(data);
+});
+
+promise.then(null, data => {
+    console.log(data);
+});
+Manjunath Muniraju
+12:49 PM
+let memberName = [ // 500
+    {
+        id:123,
+        name:"Himanshu"
+    },
+];
+
+let logAction = [ // 300
+    {
+        id:12,
+        memberId: 123,
+        name:"Update Customer Details"
+    },
+];
+
+
+// 12, "Update Customer Details", "Himanshu"
+// [{}, {}]
+You
+1:10 PM
+https://onecompiler.com/javascript/42musamuv
+Software Development Engineer - II (Fullstack): Sanat Jain | Capillary Technologies
 
 
 
