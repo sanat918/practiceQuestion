@@ -39,3 +39,8 @@ difference between type and interface in typescript?
 setter didn't have any type in typescript.
 https://leetcode.com/problems/3sum/description/
 why Anonymous  functions are introduced in javascript
+real and virtual DOM
+create a timer shows decrement count on timelapse and show alert when its got over
+event loop
+techniques to improve performance of a node app
+techniques to improve security of a node app
