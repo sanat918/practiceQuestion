@@ -832,5 +832,58 @@ console.log(result)
 
 
 
+[14:46] Uday Kumar K (Unverified)
+ 
+console.log(1);
+setTimeout(() => console.log(2));
+Promise.resolve().then(() => console.log(3));
+Promise.resolve().then(() => setTimeout(() => console.log(4)));
+Promise.resolve().then(() => console.log(5));
+setTimeout(() => console.log(6));
+console.log(7);
+ 
+[14:49] Sanat Jain 
+1
+
+7
+
+2
+
+3
+
+4
+
+5
+
+6
+
+
+ans
+1
+7
+3
+5
+2
+6
+4
+ 
+[14:50] 
+Murali Elumalai (Unverified) left the chat.
+
+ 
+[14:55] Uday Kumar K (Unverified)
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+ 
+let user = makeUser();
+ 
+console.log(user.ref.name)
+ 
+
+
 
 
