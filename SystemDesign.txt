@@ -1,0 +1,71 @@
+SystemDesign
+ =====================
+ ThinClient- It is a light weight computer where processing will happen at server end.(VDI machines)
+ ThickClient- It is a computer that perform most of the operation locally using its own resources.(ex: videoEditor, gaming Software)   Forward-Proxy: it sits client side and server does not know about the client from where its requesting.
+ ex:- VPN , Anonymity, blocking content
+
+ Reverse-Proxy: - it sits server side and client can interact with multiple server but didn't know the exact address.
+ ex:- load balnacer, caching, SSL- termination  
+ 
+ Monolithic Archietecture:-
+ --------------------------
+  if a all the components and functionalities of a project are entangled and combined in a single codebase then that is a monolithic archietecture.
+  -its less complex, 
+  -high productivity, 
+  -easy to understand.
+
+ Distributed System:- 
+ ------------------------
+ It's a collection of multiple individual suystem connected through a network that shares resources, communicate and
+- coordinate to archieve common goal.
+- latency=computational Delay + Network Delay
+
+Network Latency:-
+------------------
+Req time + computation time + response time 
+
+Monolithic archietecture has less network latency as all resources are available or hosted over same server. Distributed archietecture have more network latency as resources are available in the different servers.
+
+Methods used to minimise Network latency
+-----------------------------------------
+CDN - content delivery network
+------------------------------
+-It is used as we are requesting from india and data is available in US server to it will take time so instead of this we can setup one server in india and minimise the network latency.
+
+Caching
+---------
+let suppose one we have a function after excuting 1000 line its giving value which we require so instead of again executing it we save computed value and whenever we get a request we get this saved value(we call these variable Caching Keys).
+EX:- Redis
+
+Throughput
+----------
+Throughput is a measure of how many units of information a system can process in a given amount of time. 
+It is measured in BPS(Bits per second). Distributed has more Throughput as it has more resources and can process more task separately at a same time.
+
+causes of low Throughput
+-------------------------
+network latency, protocol overhead, conjestion(too many requests as a same time)
+
+how to improve
+---------------
+CDN, caching, distributed system, 
+
+LoadBalncer
+-----------
+it distributes the request to the resources in a round robin fashion.
+
+Redundency VS replication
+----------------------------
+In Redundency we make a copy of node but data is not syncing with other node where as in replication we make a copy but data sycing is also happening at the same time.
+
+
+Consistency
+-------------
+Suppose we have a booking platform one client is booking ticket from the pune location and he booked that ticket same time another client booking the same same seat so make the system consistent we need to commit the changes in the DB as soon as possible.
+
+how to improve consistent
+--------------------------
+Improve network bandwidth
+Stop reading ops
+Replication based on distance 
+
