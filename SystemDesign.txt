@@ -35,7 +35,16 @@ CDN - content delivery network
 Caching
 ---------
 let suppose one we have a function after excuting 1000 line its giving value which we require so instead of again executing it we save computed value and whenever we get a request we get this saved value(we call these variable Caching Keys).
-EX:- Redis
+Types:- Inmemory(stored in ram) ex:- Memcached, external or distributed(stored in different nodes) EX:- Redis
+
+when to use Caching
+---------------------
+1. when we have read intensive task.(newspaper app)
+2. static content.
+
+Cache Eviction stretogies
+-------------------------
+LRU(least recently used), MRU(most recently used), FIFO, LIFO, RR 
 
 Throughput
 ----------
@@ -54,7 +63,7 @@ LoadBalncer
 -----------
 it distributes the request to the resources in a round robin fashion.
 
-Redundency VS replication
+Redundency VS replication(Redundency + Synchronization)
 ----------------------------
 In Redundency we make a copy of node but data is not syncing with other node where as in replication we make a copy but data sycing is also happening at the same time.
 
@@ -63,9 +72,65 @@ Consistency
 -------------
 Suppose we have a booking platform one client is booking ticket from the pune location and he booked that ticket same time another client booking the same same seat so make the system consistent we need to commit the changes in the DB as soon as possible.
 
+types of Consistency
+---------------------
+1. Strong Consistency-
+   It doesn't allow read operation until nodes with replicated data updated.
+
+2. Eventually Consistency-
+   User Read requests are not halted till all the replicas are updated rather the update process is eventual. Some users might receive old data but eventuall all the data is updatea to the latest data.
+
+3. Weak Consistency-
+    Here its not neccessary to update all nodes, depends on the bussiness requirement.
+
 how to improve consistent
 --------------------------
 Improve network bandwidth
 Stop reading ops
 Replication based on distance 
+
+CAP Theoram
+------------
+if we are disgning a distributed system only two things from all three(Consistency,Availablity and Partition Tolerance) will be archieved at a time.
+
+P is important in each and every case in all Applications.So it can be PA or PC
+
+Vertical Scaling
+-----------------
+In the same machine we are upgrading its hardware.
+
+Horizontal Scaling
+----------------------
+Adding more machines as users are increasing.
+
+Redundancy
+----------
+Redundancy is simply the duplication of nodes or components so that when a node or component fails, the duplicate node is available to service customers. 
+
+1.Active Redundancy
+--------------------
+Active Redundancy is considered when each unit is operating/active and responding to the action. Multiple nodes are connected to a load balancer, and each unit receives an equal load.
+
+2. Passive Redundancy
+---------------------
+Passive Redundancy is considered when one node is active or operational and the other is not operating. During the breakdown of the active node, the Daccive node maintains availabilitu bu becoming the active node.
+
+
+Load balnacer
+---------------
+Load Balancing is the process of efficient distribution of network traffic across all nodes in a distributed system.
+
+**Roles of Load Balancer**
+1. The load distribution is equal over every node.
+2. Health check lif the node is not operational, the request is passed to another node that is up and running.
+3. Load balancers ensure high scalability, high throughput and high availability.
+
+**Load Balancing Algorithms**
+1. Round Robin (Static) - rotation fashion.
+2. Weighted Roud robin (Static) - It is similar to the Round Robin when the servers are of differen capacities. ( some node can have better resourcs, others might not have )
+3. IP Hash Algorithm (Static) - The servers have almost equal capacity, and the hash function ( input is source IP) is used for random or unbiased distribution of requests to the nodes.
+4. Source IP Hash (Static) - Source IP Hash combines the server and client's source and destination IP addresses to produce a hash key. The key can be used to determine the
+request distribution.
+5. Least Connection Algorithm ( Dynamic) - Client requests are distributed to the application server with the least number of active connections at the time the client request is receivea.
+6. Least Response Time (Dynamic) - The request is distributed based on the server which has the lenct ressance time
 
