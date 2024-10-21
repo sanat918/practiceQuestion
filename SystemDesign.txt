@@ -134,3 +134,62 @@ request distribution.
 5. Least Connection Algorithm ( Dynamic) - Client requests are distributed to the application server with the least number of active connections at the time the client request is receivea.
 6. Least Response Time (Dynamic) - The request is distributed based on the server which has the lenct ressance time
 
+Polyglot Persistence
+--------------------
+When we use multiple databses to fulfill our requirement.
+
+Indexing
+----------
+We apply Indexing where we perform more read intensive tasks and its use B-tree data structure.It make a lookup table and find the desired value corresponds to the row.
+
+Synchronous Communication
+-------------------------
+Here we can only perform one task at a time.
+ex:- transaction
+
+WebServers
+-----------
+At the most basic level, whenever a browser needs a file that is hosted on a web server, the browser requests the file via HTTP. When the request reaches the correct (hardware) web server, the (software) HTTP server accepts the request, finds the requested document, and sends it back to the browser, also through HTTP. (If the server doesn't find the requested document, it returns a 404 response instead.)
+EX:- Apache server, nginx
+
+Communication protocol in computer Networks
+--------------------------------------------
+Models
+1. Push - A push model in communication is a one-way communication style where the sender initiates the ransmission of information to the receiver without waiting for a response
+2. Pull / Polling - In this client request server respond.
+3. Long Polling - Client requests, server keep it open until it gives response.(ex:- like 100 client request for the resource but only 20 are available so first 20 get the resource but until remaining 80 get resource so server keep these remaining requests open)
+4. Socket - 
+5. Server sent events -Ex - Cricbuzz Client subscribes to the server "strean and the server will send a message("stream of events") to the client until server or client closes the stream.
+One way connection
+Long-Lived Connection
+
+
+SOA(service oriented architecture) and Microservices
+---------------------
+SOA
+-----
+Services can share data storage
+Less scalable architecture
+Deployment is time-consuming
+Focused on maximizes application
+service reusability
+
+Microservices
+----------------------
+Each microservice has separate and independt of platse seekingge
+Highly scalable archietechture
+deployment is easy and less time taken
+More focus fier architecture
+
+Tier Archietecture
+------------------
+A web application can be designed according to the n-tier architecture where tiers are different layers of
+architecture.A tier is a logical separation between different components of the application. Tier architecture helps make modifications and updation of different components easy. It helps in assigning dedicated tasks and roles to each component.
+
+
+
+
+
+
+
+
