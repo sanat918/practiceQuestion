@@ -188,6 +188,31 @@ architecture.A tier is a logical separation between different components of the 
 
 
 
+Conept and Coding by Shreyans Jain
+===============================================================================
+Solid Priniples
+
+S - Single Responsibility Principle
+0 - Open for extension but Closed for modiiations Principle
+L - Liskov Substitution Principle(LSP)
+-----------------------------------------
+If Class B is subtype of Class A, then we should be able to
+replace object of A with B without breaking the
+behaviour of the program.
+------------------------------------------
+I - Interface Segmented Principle
+------------------------------------------
+Interfaces should be such, that client should implement
+unnecessary functions they do not need
+-------------------------------------------
+D - Dependency Inversion Principle
+-------------------------------------------
+Class should depend on interfaces rather than concrete classes
+
+
+Is a / Has a RelationsShip
+--------------------------
+
 
 
 
