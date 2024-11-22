@@ -181,6 +181,32 @@ Highly scalable archietechture
 deployment is easy and less time taken
 More focus fier architecture
 
+Microservices decomposition
+----------------------------
+https://www.geeksforgeeks.org/decomposition-of-microservices-architecture/
+
+Microservices DesignPatterns
+----------------------------
+Strangler
+----------
+We use Strangler pattern when we refractoring two microservice.Ex(If i have one monolithic serrver and I need to devide it into the different microservices so Strangler pattern help me to do this.)
+
+SAGA (Data mangement in Microservice)
+-------------------------------------
+Database for each Individual service
+Shared Databse
+
+SAGA are of two types
+-----------------------
+Choreography - Its a event based(here events call one after another)
+Orchestrator - We didn't have dependency instead of Orchestrator call the events one by one.
+
+CQRS (Command query request execution)
+---------------------------------------
+Here is only difference is that for reading operation we use different but single DB.
+
+
+
 Tier Archietecture
 ------------------
 A web application can be designed according to the n-tier architecture where tiers are different layers of
@@ -213,8 +239,15 @@ Class should depend on interfaces rather than concrete classes
 Is a / Has a RelationsShip
 --------------------------
 
+Client-Server protocols
+-----------------------
+Http, ftp, smtp, web-sockets
 
+P2P
+----
+WebRTC
 
+CAP Theoram
 
 
 
