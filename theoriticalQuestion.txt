@@ -103,4 +103,27 @@ Regularly update React and other dependencies to benefit from performance improv
 12. Monitor and Iterate
 Continuously monitor performance metrics and user feedback. Iterate on improvements based on real-world usage and data.
 
------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+By default size of threadPool is 4 and can go upto 128.
+
+CallBack functions
+------------------
+A function that is passed as an argument to another function, and is invoked later, typically when a task is done.
+Ex:-
+function greet(name, callback) {
+    console.log("Hello, " + name);
+    callback();
+}
+
+function sayBye() {
+    console.log("Goodbye!");
+}
+
+greet("Alice", sayBye);
+
+// Output:
+// Hello, Alice
+// Goodbye!
+
+-----------------------------------------------------------------------------------------------------------------
+

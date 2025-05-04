@@ -5,6 +5,17 @@ const CurSum = (a) => {
     return a;
   }
 }
+
+---or-----------
+function CurSum(a){
+    return function(b){
+        if(!b){
+            return a;
+        }
+        return CurSum(a+b)
+    }
+}
+
 console.log(CurSum(1)(2)(2)());
 //
 const StArr = [1, 9, 2, 6, 4, 3];
@@ -44,7 +55,7 @@ function maxEnd(arr)
 }
 
 ------------------------------------------------------------------------------------------
-
+Binary sort is work on the sorted array.
 // --------Binary search algorithm----------------------
 function BSFun(ar, target) {
   Lindex = 0; Rindex = ar.length - 1;
@@ -826,7 +837,7 @@ console.log(arr.join(" "));
 
 
 JWT can we used it only at login time
-what algo we generally use at JWT default one 
+what algo we generally use at JWT default one = HS256
 find({age:30})
 quotes or not
 

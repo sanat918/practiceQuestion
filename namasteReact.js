@@ -48,8 +48,9 @@
 // JSX is not mandatory. ES6 is also not mandatory.
 
 // JSX only have one parenet if i didnt want the multiple  div i can simply use React.fragment. 
+// Config driven UI/
+// optionalChaining
 
 
 
-
-5.  60 min
+8.  
