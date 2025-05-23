@@ -54,4 +54,22 @@
 //9. Add Client side validation as well as server
 //10.  Error Handling and Security Headers
 //11. Regualar updates and patch
-//12. 
+
+/* 
+SSRF(Server side request forgery)
+1. Unvalidated user input
+2. Lack of whiteListing
+3. Insufficient policy control
+4. XML  External Entity (XXE)
+*/
+
+/*
+Server-side javascript Injection
+1. Inadequate input validation
+2. Direct execution of user provided code
+3. using dangerous functions
+4. Insecure serialization
+
+*/
+
+1.14

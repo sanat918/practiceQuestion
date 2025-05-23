@@ -126,4 +126,25 @@ greet("Alice", sayBye);
 // Goodbye!
 
 -----------------------------------------------------------------------------------------------------------------
+Different consoles
+1. console.log()
+2. console.warn()-  to display the issue but these not required immediate actions
+3. console.table()
+4. console.error()- requires immediate actions to resolve
+5.  console.dir()- to inspect javascript element or DOM
+   ex:-
+   let cc=document.querySelector("#ele")
+   console.dir(CC)
+6. To group related logs together for better organization. Result: Groups the logs in an expandable collapsible     format. 
+   console.group("User Details")
+   console. log ("Name: Alice");
+   console. log("Age: 25");
+   console. log ("Role: Admin");
+   console.groupEnd();
+7. TO MEASURE TIME OF execution block.
+    console.time("API fetch")
+    setTimeout(()=>{
+        console.timeEnd("Api fetch time")
+    },2000)
+-----------------------------------------------------------------------------------------------------------------
 
