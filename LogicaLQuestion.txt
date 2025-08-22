@@ -1140,6 +1140,9 @@ for(let i=1;i<arr.length;i++){
     else if(arr[i]===arr[i-1]+1){
         temp++
     }
+    else {
+            count = 1; // Sequence broke, reset count
+        }
     result=Math.max(temp,result)
     
 }
@@ -1147,6 +1150,28 @@ for(let i=1;i<arr.length;i++){
 console.log(result)
 
 --OR------------------------------------------------------------------------------------------------
+function longestConsecutive(nums) {
+    const numSet = new Set(nums);  // Removes duplicates and allows O(1) lookups
+    let maxLength = 0;
+
+    for (let num of numSet) {
+        // Only start counting if it's the beginning of a sequence
+        if (!numSet.has(num - 1)) {
+            let currentNum = num;
+            let currentLength = 1;
+
+            // Count consecutive numbers
+            while (numSet.has(currentNum + 1)) {
+                currentNum++;
+                currentLength++;
+            }
+
+            maxLength = Math.max(maxLength, currentLength);
+        }
+    }
+
+    return maxLength;
+}
 
 
 -----------------------------------------------------------------------------------------------------
@@ -1194,9 +1219,103 @@ var isAnagram = function(s, t) {
     return true;
 };
 -----------------------------------------------------------------------------------------------------
+Subarray Sum Equals K
+-----------------------
+var subarraySum = function(nums, k) {
+    let count=0
+    let sum=0
+ 
+        for(let i=0;i<nums.length;i++){
+            sum=0
+            for(let j=i;j<nums.length;j++){
+                sum+=nums[j]
+                if(sum==k){
+                    count++
+                }
+                
+            }
+        }
+        return count
+};
+--OR---------------------------------------------------------------------------------------------------
+ let nums = [1,2,3]
+ let k = 3
+ let count=0
+ let sum=0
+ let map=new Map()
+ map.set(0,1)
+ 
+ for(let ele of nums){
+     sum+=ele
+     if(map.has(sum-k)){
+         count+=map.get(sum-k)
+     }
+     
+     map.set(sum,(map.get(sum)||0)+1)
+     
+ }
+ 
+ 
+ console.log(count)
 -----------------------------------------------------------------------------------------------------
--------------------------------
+Isomorphic Strings
+-----------------------
+var isIsomorphic = function(s, t) {
+  if (s.length !== t.length) return false;
+
+  let mapST = new Map();
+  let mapTS = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    let c1 = s[i];
+    let c2 = t[i];
+
+    // Check s -> t mapping
+    if (mapST.has(c1) && mapST.get(c1) !== c2) {
+      return false;
+    }
+
+    // Check t -> s mapping
+    if (mapTS.has(c2) && mapTS.get(c2) !== c1) {
+      return false;
+    }
+
+    // Create mapping
+    mapST.set(c1, c2);
+    mapTS.set(c2, c1);
+  }
+
+  return true;
+};
+
+---------OR--------------------------------
+var isIsomorphic = function(s, t) {
+  for (let i = 0; i < s.length; i++) {
+    if (s.indexOf(s[i]) !== t.indexOf(t[i])) {
+      return false;
+    }
+  }
+  return true;
+};
+
 -----------------------------------------------------------------------------------------------------
+ Intersection of Two Arrays
+ --------------------------
+ let nums1 = [4,9,5]
+let nums2 = [9,4,9,8,4]
+
+let result=new Set()
+
+for(let i=0; i<nums1.length;i++){
+    if(nums2.indexOf(nums1[i])!=-1){
+        result.add(nums1[i])
+    }
+}
+
+console.log([...result])
+--------------------------------------------------------------------------------------------------------
+
+
 ------------------------------------------------------------------------------------------------------
 
 
